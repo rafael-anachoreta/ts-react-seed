@@ -1,5 +1,5 @@
 {
-    "name": "ts-react-full-seed",
+    "name": "ts-react-seed",
     "version": "1.0.0",
     "main": "index.tsx",
     "repository": "https://github.com/rafael-anachoreta/PROJECT_NAME",
@@ -47,6 +47,7 @@
         "babel-eslint": "^10.0.1",
         "babel-loader": "^8.0.5",
         "cypress": "^3.2.0",
+        "cz-conventional-changelog": "2.1.0",
         "eslint": "^5.16.0",
         "eslint-config-prettier": "^3.6.0",
         "eslint-plugin-prettier": "^3.0.1",
@@ -83,6 +84,11 @@
     "husky": {
         "hooks": {
             "pre-push": "yarn test &&  yarn lint"
+        }
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
         }
     }
 }
