@@ -13,6 +13,7 @@
         "start": "webpack-dev-server --open --mode development",
         "test": "jest -c jest.config.js",
         "watch": "yarn test --watch",
+        "cypress:ci": "server-test 8080 cypress",
         "cypress": "cypress run",
         "cypress:open": "cypress open",
         "storybook": "start-storybook -p 9001 --ci"
@@ -60,6 +61,7 @@
         "prettier-eslint": "^8.8.2",
         "react-docgen-typescript-loader": "^3.1.0",
         "react-testing-library": "^7.0.0",
+        "start-server-and-test": "^1.9.0",
         "style-loader": "^0.23.1",
         "ts-loader": "^5.3.3",
         "ts-node": "^8.0.3",

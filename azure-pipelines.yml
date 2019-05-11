@@ -20,5 +20,5 @@ steps:
 
 - script: |
     yarn test
-    yarn cypress
+    yarn cypress:ci
   displayName: 'Testing'
