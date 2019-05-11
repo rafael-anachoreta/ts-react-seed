@@ -1,9 +1,6 @@
 {
     "version": 2,
     "name": "ts-react-seed-app",
-    "alias": [
-        "seed.com"
-    ],
     "builds": [
         {
             "src": "package.json",
