@@ -1,5 +1,6 @@
 ## TypeScript React Seed
 
+[![Build Status](https://dev.azure.com/rafaelanachoreta/ts-react-seed/_apis/build/status/rafael-anachoreta.ts-react-seed?branchName=master)](https://dev.azure.com/rafaelanachoreta/ts-react-seed/_build/latest?definitionId=2&branchName=master)
 [![Cypress.io tests](https://img.shields.io/badge/cypress.io-tests-green.svg?style=flat-square)](https://cypress.io)
 [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
