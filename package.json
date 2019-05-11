@@ -4,7 +4,7 @@
     "main": "index.tsx",
     "repository": "https://github.com/rafael-anachoreta/ts-react-seed",
     "license": "MIT",
-    "private": true,
+    "private": false,
     "scripts": {
         "commit": "git-cz",
         "build": "webpack --mode production",
@@ -44,6 +44,7 @@
         "awesome-typescript-loader": "^5.2.1",
         "babel-eslint": "^10.0.1",
         "babel-loader": "^8.0.5",
+        "css-loader": "^2.1.1",
         "cypress": "^3.2.0",
         "cz-conventional-changelog": "2.1.0",
         "eslint": "^5.16.0",
@@ -57,9 +58,9 @@
         "jest-dom": "^3.2.2",
         "prettier": "^1.16.1",
         "prettier-eslint": "^8.8.2",
-        "prop-types": "^15.6.2",
         "react-docgen-typescript-loader": "^3.1.0",
         "react-testing-library": "^7.0.0",
+        "style-loader": "^0.23.1",
         "ts-loader": "^5.3.3",
         "ts-node": "^8.0.3",
         "typescript": "^3.4.1",
@@ -68,17 +69,15 @@
         "webpack-dev-server": "^3.1.14"
     },
     "dependencies": {
-        "css-loader": "^2.1.0",
         "react": "^16.8.0",
-        "react-dom": "^16.8.0",
-        "style-loader": "^0.23.1"
+        "react-dom": "^16.8.0"
     },
     "resolutions": {
         "micromatch": "^4.0.2"
     },
     "husky": {
         "hooks": {
-            "pre-push": "yarn test &&  yarn lint"
+            "pre-push": "yarn test && yarn lint"
         }
     },
     "config": {
