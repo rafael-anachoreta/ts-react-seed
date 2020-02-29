@@ -1,19 +1,19 @@
 import * as React from 'react'
-import { render, cleanup, fireEvent } from 'react-testing-library'
+import { render, cleanup, fireEvent } from '@testing-library/react'
 import { Tile } from './Tile'
-import 'jest-dom/extend-expect'
+import '@testing-library/jest-dom'
 
 const text = 'My Test'
 
-describe('Tile', (): void => {
+describe('Tile', () => {
     beforeEach(cleanup)
 
-    it('Should show a Tile with the text passed in', (): void => {
+    it('Should show a Tile with the text passed in', () => {
         const { getByText } = render(<Tile text={text} />)
         expect(getByText(text)).toBeVisible()
     })
 
-    it('Should hide Tile when clicked', (): void => {
+    it('Should hide Tile when clicked', () => {
         const { queryByText, getByTestId } = render(<Tile text={text} />)
 
         expect(queryByText(text)).toBeVisible()
