@@ -1,0 +1,50 @@
+name: CI
+
+on: [push]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v2
+            - name: Run a multi-line script
+              run: |
+                  yarn --frozen-lockfile
+                  yarn test
+                  yarn build
+
+            - name: Cypress.io
+              uses: cypress-io/github-action@v1.16.1
+              with:
+                  start: yarn start
+            - uses: actions/upload-artifact@v1
+              if: failure()
+              with:
+                  name: cypress-screenshots
+                  path: cypress/screenshots
+            - uses: actions/upload-artifact@v1
+              if: always()
+              with:
+                  name: cypress-videos
+                  path: cypress/videos
+
+            - name: Deploy to netlify to Dev
+              uses: netlify/actions/cli@master
+              if: github.ref != 'refs/heads/master'
+              env:
+                NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+                NETLIFY_SITE_ID: ${{ secrets.DEV_NETLIFY_SITE_ID }}
+              with:
+                args: deploy --dir=dist
+                secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
+
+            - name: Deploy to netlify to Production
+              uses: netlify/actions/cli@master
+              if: github.ref == 'refs/heads/master'
+              env:
+                NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+                NETLIFY_SITE_ID: ${{ secrets.DEV_NETLIFY_SITE_ID }}
+              with:
+                args: deploy --dir=dist --prod
+                secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
