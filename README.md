@@ -15,7 +15,7 @@ This is a seed project for a web application built with TypeScript. It contains 
 -   Jest and React Testing Library
 -   Storybook
 -   Cypress
--   Azure Pipelines
+-   GitHub Actions
 
 ## Usage
 

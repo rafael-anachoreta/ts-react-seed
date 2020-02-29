@@ -1,0 +1,31 @@
+name: CI
+
+on: [push]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v2
+            - name: Run a multi-line script
+              run: |
+                  yarn
+                  yarn test
+                  yarn build
+
+            - name: Cypress.io
+              uses: cypress-io/github-action@v1.16.1
+              with:
+                  start: yarn start
+            - uses: actions/upload-artifact@v1
+              if: failure()
+              with:
+                  name: cypress-screenshots
+                  path: cypress/screenshots
+            # Test run video was always captured, so this action uses "always()" condition
+            - uses: actions/upload-artifact@v1
+              if: always()
+              with:
+                  name: cypress-videos
+                  path: cypress/videos
