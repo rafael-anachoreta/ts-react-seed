@@ -30,12 +30,23 @@ jobs:
                   name: cypress-videos
                   path: cypress/videos
 
-            - name: Deploy to netlify
+            - name: Deploy to netlify to Production
               uses: netlify/actions/cli@master
+              if: github.ref == 'refs/heads/master'
               env:
                 NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
                 NETLIFY_SITE_ID: ${{ secrets.DEV_NETLIFY_SITE_ID }}
               with:
-                args: deploy --dir=build --prod
+                args: deploy --dir=dist --prod
                 secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
-                
+
+            - name: Deploy to netlify to Dev
+              uses: netlify/actions/cli@master
+              if: github.ref != 'refs/heads/master'
+              env:
+                NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+                NETLIFY_SITE_ID: ${{ secrets.DEV_NETLIFY_SITE_ID }}
+              with:
+                args: deploy --dir=dist
+                secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
+                                
