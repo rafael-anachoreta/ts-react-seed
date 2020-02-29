@@ -21,6 +21,6 @@
         "emitDecoratorMetadata": true,
         "types": ["cypress", "node"]
     },
-    "include": ["**/*.ts"],
+    "include": ["**/*.ts", "**/*.tsx"],
     "exclude": ["node_modules", "build", "scripts"]
 }
