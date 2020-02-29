@@ -23,22 +23,11 @@ jobs:
               with:
                   name: cypress-screenshots
                   path: cypress/screenshots
-            # Test run video was always captured, so this action uses "always()" condition
             - uses: actions/upload-artifact@v1
               if: always()
               with:
                   name: cypress-videos
                   path: cypress/videos
-
-            - name: Deploy to netlify to Production
-              uses: netlify/actions/cli@master
-              if: github.ref == 'refs/heads/master'
-              env:
-                NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-                NETLIFY_SITE_ID: ${{ secrets.DEV_NETLIFY_SITE_ID }}
-              with:
-                args: deploy --dir=dist --prod
-                secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
 
             - name: Deploy to netlify to Dev
               uses: netlify/actions/cli@master
@@ -49,4 +38,13 @@ jobs:
               with:
                 args: deploy --dir=dist
                 secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
-                                
+
+            - name: Deploy to netlify to Production
+              uses: netlify/actions/cli@master
+              if: github.ref == 'refs/heads/master'
+              env:
+                NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+                NETLIFY_SITE_ID: ${{ secrets.DEV_NETLIFY_SITE_ID }}
+              with:
+                args: deploy --dir=dist --prod
+                secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
