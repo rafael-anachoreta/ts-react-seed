@@ -30,9 +30,12 @@ jobs:
                   name: cypress-videos
                   path: cypress/videos
 
-            - name: ZEIT Now Deployment
-              uses: amondnet/now-deployment@v2.0.1
+            - name: Deploy to netlify
+              uses: netlify/actions/cli@master
+              env:
+                NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+                NETLIFY_SITE_ID: ${{ secrets.DEV_NETLIFY_SITE_ID }}
               with:
-                # zeit.co token
-                zeit-token: ${{ secrets.ZEIT_TOKEN }}
-                github-token: ${{ secrets.GITHUB_TOKEN }}
+                args: deploy --dir=build --prod
+                secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
+                
