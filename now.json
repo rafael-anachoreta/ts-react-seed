@@ -1,6 +1,9 @@
 {
     "version": 2,
     "name": "ts-react-seed-app",
+    "github": {
+        "enabled": false
+    },
     "builds": [
         {
             "src": "package.json",
