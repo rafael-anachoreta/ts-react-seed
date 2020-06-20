@@ -15,7 +15,7 @@ jobs:
                   yarn build
 
             - name: Cypress.io
-              uses: cypress-io/github-action@v1.16.1
+              uses: cypress-io/github-action@v2.1.0
               with:
                   start: yarn start
             - uses: actions/upload-artifact@v1
