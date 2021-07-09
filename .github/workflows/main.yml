@@ -37,7 +37,6 @@ jobs:
                 NETLIFY_SITE_ID: ${{ secrets.DEV_NETLIFY_SITE_ID }}
               with:
                 args: deploy --dir=dist
-                secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
 
             - name: Deploy to netlify to Production
               uses: netlify/actions/cli@master
@@ -47,4 +46,3 @@ jobs:
                 NETLIFY_SITE_ID: ${{ secrets.DEV_NETLIFY_SITE_ID }}
               with:
                 args: deploy --dir=dist --prod
-                secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
