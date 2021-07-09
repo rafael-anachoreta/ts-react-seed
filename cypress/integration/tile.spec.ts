@@ -6,6 +6,6 @@ describe('Tile', () => {
             .should('be.visible')
             .click()
 
-        cy.get('[data-testid=tile]').should('not.be.visible')
+        cy.get('[data-testid=tile]').should('not.exist')
     })
 })

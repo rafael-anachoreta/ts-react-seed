@@ -8,22 +8,22 @@ jobs:
 
         steps:
             - uses: actions/checkout@v2
-            - name: Run a multi-line script
+            - name: Install dependencies, test and build
               run: |
                   yarn --frozen-lockfile
                   yarn test
                   yarn build
 
             - name: Cypress.io
-              uses: cypress-io/github-action@v2.1.0
+              uses: cypress-io/github-action@v2.11.6
               with:
                   start: yarn start
-            - uses: actions/upload-artifact@v1
+            - uses: actions/upload-artifact@v2
               if: failure()
               with:
                   name: cypress-screenshots
                   path: cypress/screenshots
-            - uses: actions/upload-artifact@v1
+            - uses: actions/upload-artifact@v2
               if: always()
               with:
                   name: cypress-videos
@@ -37,7 +37,6 @@ jobs:
                 NETLIFY_SITE_ID: ${{ secrets.DEV_NETLIFY_SITE_ID }}
               with:
                 args: deploy --dir=dist
-                secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
 
             - name: Deploy to netlify to Production
               uses: netlify/actions/cli@master
@@ -47,4 +46,3 @@ jobs:
                 NETLIFY_SITE_ID: ${{ secrets.DEV_NETLIFY_SITE_ID }}
               with:
                 args: deploy --dir=dist --prod
-                secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID"]'
