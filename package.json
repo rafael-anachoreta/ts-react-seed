@@ -56,13 +56,13 @@
     "ts-loader": "^6.2.1",
     "ts-node": "~8.6.2",
     "typescript": "~3.8.2",
-    "webpack": "~4.41.6",
-    "webpack-cli": "~3.3.11",
     "webpack-dev-server": "~3.10.3"
   },
   "dependencies": {
     "react": "~16.13.0",
-    "react-dom": "~16.13.0"
+    "react-dom": "~16.13.0",
+    "webpack": "~4.41.6",
+    "webpack-cli": "~3.3.11"
   },
   "resolutions": {
     "micromatch": "^4.0.2"
