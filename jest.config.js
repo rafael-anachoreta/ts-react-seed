@@ -5,4 +5,5 @@ module.exports = {
         '\\.(css|less)$': '<rootDir>/__mocks__/styleMock.js',
     },
     testRegex: ['(/__tests__/.*|(\\.|/)(test))\\.[jt]sx?$'],
+    testEnvironment: 'jest-environment-jsdom',
 }
