@@ -39,7 +39,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
     "husky": "^4.2.3",
-    "jest": "^25.1.0",
+    "jest": "^27.5.1",
     "prettier": "~1.19.1",
     "prettier-eslint": "^9.0.1",
     "react-docgen-typescript-loader": "~3.6.0",
