@@ -3,6 +3,14 @@ const HtmlWebPackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     entry: './src/index.tsx',
+    resolve: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    },
+    plugins: [
+        new HtmlWebPackPlugin({
+            template: './public/index.html',
+        }),
+    ],
     module: {
         rules: [
             {
@@ -30,15 +38,7 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
-            },
+            }
         ],
     },
-    resolve: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
-    },
-    plugins: [
-        new HtmlWebPackPlugin({
-            template: './public/index.html',
-        }),
-    ],
 }
