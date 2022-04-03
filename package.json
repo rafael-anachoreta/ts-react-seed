@@ -6,7 +6,6 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "commit": "git-cz",
     "build": "webpack --config webpack.prod.js",
     "prettier": "prettier -c",
     "lint": "eslint --ext .js,.ts,.jsx,.tsx --ignore-pattern *.css src/** --fix",
@@ -35,7 +34,6 @@
     "@webpack-cli/serve": "^1.6.1",
     "babel-eslint": "~10.1.0",
     "cypress": "^9.5.3",
-    "cz-conventional-changelog": "3.3.0",
     "eslint": "^8.12.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
@@ -71,11 +69,6 @@
   "husky": {
     "hooks": {
       "pre-push": "yarn test && yarn lint"
-    }
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
     }
   }
 }
