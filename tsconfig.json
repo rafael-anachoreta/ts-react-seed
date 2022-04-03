@@ -19,8 +19,19 @@
         "declaration": true,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        "types": ["cypress", "node"]
+        "types": ["node"],
+        "typeRoots": [
+            "./node_modules/@types"
+        ]
     },
-    "include": ["**/*.ts", "**/*.tsx"],
-    "exclude": ["node_modules", "build", "scripts"]
+    "include": ["./src/**/*.ts", "./src/**/*.tsx"],
+    "exclude": [
+        "node_modules",
+        "build",
+        "scripts",
+        "dist",
+        "public",
+        "./src/**/*.test.tsx",
+        "./src/**/*.stories.tsx"
+    ]
 }
