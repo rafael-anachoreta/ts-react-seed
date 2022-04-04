@@ -7,7 +7,6 @@
   "private": false,
   "scripts": {
     "build": "webpack --config webpack.prod.js",
-    "prettier": "prettier -c",
     "lint": "eslint --ext .js,.ts,.jsx,.tsx --ignore-pattern *.css src/** --fix",
     "start": "webpack serve --open --config webpack.dev.js",
     "test": "jest -c jest.config.js",
@@ -16,8 +15,7 @@
     "cypress": "cypress run",
     "cypress:open": "cypress open",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "prepare": "husky install"
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
     "@babel/core": "~7.17.8",
@@ -36,13 +34,9 @@
     "babel-eslint": "~10.1.0",
     "cypress": "^9.5.3",
     "eslint": "^8.12.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
     "husky": "^7.0.0",
     "jest": "^27.5.1",
-    "prettier": "~2.6.2",
-    "prettier-eslint": "^13.0.0",
     "react-docgen-typescript-loader": "~3.7.2",
     "start-server-and-test": "~1.14.0",
     "ts-node": "~10.7.0",
@@ -64,8 +58,5 @@
     "webpack": "^5.71.0",
     "webpack-cli": "^4.9.2",
     "webpack-merge": "^5.8.0"
-  },
-  "resolutions": {
-    "micromatch": "^4.0.2"
   }
 }

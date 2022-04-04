@@ -16,7 +16,7 @@
         "project": "./tsconfig.eslint.json",
         "sourceType": "module"
     },
-    "plugins": ["react", "prettier", "@typescript-eslint"],
+    "plugins": ["react", "@typescript-eslint"],
     "rules": {},
     "settings": {
         "react": {
