@@ -16,7 +16,8 @@
     "cypress": "cypress run",
     "cypress:open": "cypress open",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@babel/core": "~7.17.8",
@@ -38,7 +39,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
-    "husky": "^7.0.4",
+    "husky": "^7.0.0",
     "jest": "^27.5.1",
     "prettier": "~2.6.2",
     "prettier-eslint": "^13.0.0",
@@ -66,10 +67,5 @@
   },
   "resolutions": {
     "micromatch": "^4.0.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "yarn test && yarn lint"
-    }
   }
 }
