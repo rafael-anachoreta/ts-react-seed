@@ -13,7 +13,7 @@ export function Tile({ text }: Props): JSX.Element | null {
         return null
     }
     return (
-        <div
+        <button
             className="tile"
             data-testid="tile"
             onClick={(): void => {
@@ -21,6 +21,6 @@ export function Tile({ text }: Props): JSX.Element | null {
             }}
         >
             {text}
-        </div>
+        </button>
     )
 }
