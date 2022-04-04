@@ -15,6 +15,11 @@ This is a seed project for a web application built with TypeScript. It contains 
 -   Cypress
 -   GitHub Actions
 
+
+The main app is deployed to https://ts-react-seed-app.netlify.app
+
+Storybook is deployed to https://ts-react-seed-storybook.netlify.app
+
 ## Usage
 
 First, install all the dependencies with `yarn` or `npm`
