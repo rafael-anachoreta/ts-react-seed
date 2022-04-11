@@ -44,7 +44,7 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
-    "@types/react": "^17.0.43",
+    "@types/react": "^18.0.1",
     "@types/react-dom": "^17.0.14",
     "babel-loader": "~8.2.4",
     "css-loader": "^6.7.1",
