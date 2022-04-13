@@ -18,12 +18,12 @@ jobs:
               uses: cypress-io/github-action@v3.0.3
               with:
                   start: yarn start
-            - uses: actions/upload-artifact@v2
+            - uses: actions/upload-artifact@v3
               if: failure()
               with:
                   name: cypress-screenshots
                   path: cypress/screenshots
-            - uses: actions/upload-artifact@v2
+            - uses: actions/upload-artifact@v3
               if: always()
               with:
                   name: cypress-videos
