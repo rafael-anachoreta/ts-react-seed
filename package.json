@@ -12,7 +12,7 @@
     "cypress:ci": "server-test 8080 cypress",
     "cypress:open": "cypress open",
     "lint": "eslint --ext .js,.ts,.jsx,.tsx --ignore-pattern *.css src/** --fix",
-    "prettier": "npx prettier",
+    "prettier": "yarn prettier --write .",
     "start": "webpack serve --open --config webpack.dev.js",
     "storybook": "start-storybook -p 6006",
     "watch": "yarn test --watch"
@@ -35,6 +35,7 @@
     "css-loader": "^6.8.1",
     "cypress": "^12.14.0",
     "eslint": "^8.42.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-react": "^7.32.2",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.1",
