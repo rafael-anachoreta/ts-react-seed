@@ -12,6 +12,7 @@
     "cypress:ci": "server-test 8080 cypress",
     "cypress:open": "cypress open",
     "lint": "eslint --ext .js,.ts,.jsx,.tsx --ignore-pattern *.css src/** --fix",
+    "prettier": "npx prettier",
     "start": "webpack serve --open --config webpack.dev.js",
     "storybook": "start-storybook -p 6006",
     "watch": "yarn test --watch"
@@ -38,6 +39,7 @@
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.1",
     "husky": "^8.0.3",
+    "prettier": "^2.8.8",
     "react-docgen-typescript-loader": "~3.7.2",
     "start-server-and-test": "~2.0.0",
     "style-loader": "^3.3.3",

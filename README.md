@@ -6,13 +6,12 @@
 
 This is a seed project for a web application built with TypeScript. It contains all the dependencies you would need to build a new web project in React, such as:
 
--   React
--   Webpack and Babel
--   ESLint
--   Storybook
--   Cypress
--   GitHub Actions
-
+- React
+- Webpack and Babel
+- ESLint
+- Storybook
+- Cypress
+- GitHub Actions
 
 The main app is deployed to https://ts-react-seed-app.netlify.app
 

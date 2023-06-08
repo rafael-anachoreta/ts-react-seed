@@ -1,35 +1,33 @@
 {
-    "compilerOptions": {
-        "outDir": "build/lib",
-        "module": "commonjs",
-        "target": "es5",
-        "lib": ["es5", "es6", "es7", "es2017", "dom"],
-        "allowJs": false,
-        "jsx": "react",
-        "moduleResolution": "node",
-        "rootDirs": ["src"],
-        "baseUrl": "src",
-        "forceConsistentCasingInFileNames": true,
-        "noImplicitReturns": true,
-        "noImplicitThis": true,
-        "strictNullChecks": true,
-        "noUnusedLocals": true,
-        "declaration": true,
-        "experimentalDecorators": true,
-        "emitDecoratorMetadata": true,
-        "types": ["node"],
-        "typeRoots": [
-            "./node_modules/@types"
-        ]
-    },
-    "include": ["./src/**/*.ts", "./src/**/*.tsx"],
-    "exclude": [
-        "node_modules",
-        "build",
-        "scripts",
-        "dist",
-        "public",
-        "./src/**/*.test.tsx",
-        "./src/**/*.stories.tsx"
-    ]
+  "compilerOptions": {
+    "outDir": "build/lib",
+    "module": "commonjs",
+    "target": "es5",
+    "lib": ["es5", "es6", "es7", "es2017", "dom"],
+    "allowJs": false,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "rootDirs": ["src"],
+    "baseUrl": "src",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "declaration": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "types": ["node"],
+    "typeRoots": ["./node_modules/@types"]
+  },
+  "include": ["./src/**/*.ts", "./src/**/*.tsx"],
+  "exclude": [
+    "node_modules",
+    "build",
+    "scripts",
+    "dist",
+    "public",
+    "./src/**/*.test.tsx",
+    "./src/**/*.stories.tsx"
+  ]
 }
