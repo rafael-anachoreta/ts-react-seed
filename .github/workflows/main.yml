@@ -3,28 +3,27 @@ name: CI
 on: [push]
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-
-        steps:
-            - uses: actions/checkout@v3
-            - name: Install dependencies, test and build
-              run: |
-                  yarn
-                  yarn test
-                  yarn build
-
-            - name: Cypress.io
-              uses: cypress-io/github-action@v3.0.3
-              with:
-                  start: yarn start
-            - uses: actions/upload-artifact@v3
-              if: failure()
-              with:
-                  name: cypress-screenshots
-                  path: cypress/screenshots
-            - uses: actions/upload-artifact@v3
-              if: always()
-              with:
-                  name: cypress-videos
-                  path: cypress/videos
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install dependencies, test and build
+        run: |
+          yarn
+          yarn test
+          yarn build
+      - name: Run e2e tests
+        uses: cypress-io/github-action@v5
+        with:
+          install: false
+          start: yarn start
+      - uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+      - uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: cypress-videos
+          path: cypress/videos
