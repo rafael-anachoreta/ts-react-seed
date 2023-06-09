@@ -11,11 +11,8 @@
     "cypress": "cypress run",
     "cypress:ci": "server-test 8080 cypress",
     "cypress:open": "cypress open",
-    "lint": "eslint --ext .js,.ts,.jsx,.tsx --ignore-pattern *.css src/** --fix",
-    "prettier": "prettier --write .",
     "start": "webpack serve --open --config webpack.dev.js",
     "storybook": "start-storybook -p 6006",
-    "watch": "yarn test --watch",
     "prepare": "husky install"
   },
   "devDependencies": {
@@ -59,6 +56,12 @@
     "react-dom": "^18.2.0"
   },
   "lint-staged": {
-    "*": "yarn prettier && yarn lint"
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,css,md}": [
+      "prettier --write"
+    ]
   }
 }

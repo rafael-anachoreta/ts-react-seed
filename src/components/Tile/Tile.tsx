@@ -3,7 +3,7 @@ import { useState } from "react"
 import "./Tile.css"
 
 interface Props {
-  text?: string;
+  text?: string
 }
 
 export function Tile({ text }: Props): JSX.Element | null {
