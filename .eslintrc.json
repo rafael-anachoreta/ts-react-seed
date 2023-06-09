@@ -1,26 +1,27 @@
 {
-    "parser": "@typescript-eslint/parser",
-    "env": {
-        "browser": true,
-        "es6": true
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-        "plugin:@typescript-eslint/recommended",
-        "plugin:react/recommended"
-    ],
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 2018,
-        "project": "./tsconfig.eslint.json",
-        "sourceType": "module"
-    },
-    "plugins": ["react", "@typescript-eslint"],
-    "rules": {},
-    "settings": {
-        "react": {
-            "version": "detect"
-        }
+    "ecmaVersion": 2018,
+    "project": "./tsconfig.eslint.json",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "rules": {},
+  "settings": {
+    "react": {
+      "version": "detect"
     }
+  }
 }

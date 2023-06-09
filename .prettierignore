@@ -7,4 +7,3 @@ storybook-static/
 # Cypress
 cypress/videos/
 cypress/screenshots/
-yarn-error.log
