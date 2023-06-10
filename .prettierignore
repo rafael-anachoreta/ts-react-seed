@@ -2,7 +2,6 @@ node_modules/
 build/
 dist/
 .vscode/
-storybook-static/
 
 # Cypress
 cypress/videos/

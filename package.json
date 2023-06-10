@@ -7,23 +7,18 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --mode production",
-    "build-storybook": "build-storybook",
     "cypress": "cypress run",
     "test:comp": "cypress run --component",
     "test:comp:open": "cypress open --component",
     "test:e2e:ci": "server-test 8080 cypress",
     "test:e2e:open": "cypress open",
     "start": "webpack serve --open --mode development",
-    "storybook": "start-storybook -p 6006",
     "prepare": "husky install"
   },
   "devDependencies": {
     "@babel/core": "~7.22.5",
     "@babel/preset-env": "~7.22.5",
     "@babel/preset-react": "~7.22.5",
-    "@storybook/addon-actions": "^7.0.20",
-    "@storybook/addon-essentials": "^7.0.20",
-    "@storybook/react": "^7.0.20",
     "@types/node": "^20.2.5",
     "@types/react": "^18.2.9",
     "@types/react-dom": "^18.2.4",
