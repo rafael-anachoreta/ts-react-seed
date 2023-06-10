@@ -20,13 +20,5 @@
     "types": ["cypress", "node"]
   },
   "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": [
-    "node_modules",
-    "build",
-    "scripts",
-    "dist",
-    "public",
-    "./src/**/*.test.tsx",
-    "./src/**/*.stories.tsx"
-  ]
+  "exclude": ["node_modules", "build", "scripts", "dist", "public"]
 }
