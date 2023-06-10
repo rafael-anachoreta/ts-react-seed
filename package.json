@@ -6,7 +6,7 @@
   "repository": "https://github.com/rafael-anachoreta/ts-react-seed",
   "license": "MIT",
   "scripts": {
-    "build": "yarn build:css && webpack --mode production",
+    "build": "webpack --mode production",
     "build:css": "npx tailwindcss -i ./src/index.css -o ./public/index.css",
     "cypress": "cypress run",
     "test:comp": "cypress run --component",
