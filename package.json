@@ -7,7 +7,6 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --mode production",
-    "build:css": "npx tailwindcss -i ./src/index.css -o ./public/index.css",
     "cypress": "cypress run",
     "test:comp": "cypress run --component",
     "test:comp:open": "cypress open --component",
