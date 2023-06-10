@@ -17,10 +17,9 @@
     "declaration": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "types": ["node"],
-    "typeRoots": ["./node_modules/@types"]
+    "types": ["cypress", "node"]
   },
-  "include": ["./src/**/*.ts", "./src/**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx"],
   "exclude": [
     "node_modules",
     "build",

@@ -7,9 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Install dependencies and build
+      - name: Install dependencies, test and build
         run: |
           yarn
+          yarn test:comp
           yarn build
       - name: Run e2e tests
         uses: cypress-io/github-action@v5

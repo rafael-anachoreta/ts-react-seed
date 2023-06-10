@@ -2,7 +2,7 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin")
 
 module.exports = (env, argv) => {
-  const isProduction = argv.mode === "production"
+  const isProduction = argv?.mode === "production"
 
   const config = {
     entry: isProduction ? "./src" : "./src/index.tsx",

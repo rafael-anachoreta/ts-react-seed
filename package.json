@@ -9,8 +9,10 @@
     "build": "webpack --mode production",
     "build-storybook": "build-storybook",
     "cypress": "cypress run",
-    "cypress:ci": "server-test 8080 cypress",
-    "cypress:open": "cypress open",
+    "test:comp": "cypress run --component",
+    "test:comp:open": "cypress open --component",
+    "test:e2e:ci": "server-test 8080 cypress",
+    "test:e2e:open": "cypress open",
     "start": "webpack serve --open --mode development",
     "storybook": "start-storybook -p 6006",
     "prepare": "husky install"
