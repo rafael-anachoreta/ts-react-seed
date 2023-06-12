@@ -34,7 +34,7 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-react": "^7.32.2",
     "html-loader": "^4.2.0",
-    "html-webpack-plugin": "^5.5.1",
+    "html-webpack-plugin": "^5.5.3",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
     "postcss-loader": "^7.3.3",
