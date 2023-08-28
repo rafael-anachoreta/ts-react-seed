@@ -13,7 +13,7 @@ jobs:
           yarn test:comp
           yarn build
       - name: Run e2e tests
-        uses: cypress-io/github-action@v5
+        uses: cypress-io/github-action@v6
         with:
           install: false
           start: yarn start
